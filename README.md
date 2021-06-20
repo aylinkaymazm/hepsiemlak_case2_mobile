@@ -13,10 +13,15 @@ Here these case steps:
 -filters are
 
 1.Ankara
+
 2.Çankaya
+
 3.Konut
+
 4.2+1
+
 5.Site içerisinde:Evet
+
 -search and page list opened
 
 -Click 3rd listing on the results and go to listing detail page
