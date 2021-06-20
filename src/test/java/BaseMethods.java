@@ -17,8 +17,6 @@ public class BaseMethods {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("mobileEmulation", mobileEmulation);
 
-        options.addArguments("start-maximized");
-        options.addArguments("--disable-notifications");
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 
         ChromeDriver driver = new ChromeDriver();

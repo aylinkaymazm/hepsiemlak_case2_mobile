@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestCases extends BaseMethods {
 
+    JavascriptExecutor jse = (JavascriptExecutor)driver;
     public void btn_kiralik_icon () {
         driver.findElement(By.cssSelector("div[class='link-sliding'] a[href='/kiralik']")).click();
     }
@@ -38,11 +39,9 @@ public class TestCases extends BaseMethods {
     }
 
     public void btn_oda_tipi(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollBy(0,400)");
         WebElement flag =  driver.findElement(By.cssSelector("section[class='room-type'] > section"));
 
-        js.executeScript("arguments[0].scrollIntoView();", flag);
-        flag.click();
     }
 
     public void btn_oda_tipi_1(){
@@ -57,7 +56,7 @@ public class TestCases extends BaseMethods {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement flag =  driver.findElement(By.cssSelector("section[class='within-site d-flex']"));
 
-        js.executeScript("arguments[0].scrollIntoView();", flag);
+        jse.executeScript("window.scrollBy(0,600)");
         TimeUnit.SECONDS.sleep(1);
         driver.findElement(By.cssSelector("section[class='within-site d-flex'] label")).click();
     }
@@ -67,10 +66,9 @@ public class TestCases extends BaseMethods {
     }
 
     public void third_offer() throws InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollBy(0,300)");
         WebElement flag =  driver.findElement(By.cssSelector("div[class='reality-list'] > :nth-child(3) .inner >div.card-link"));
 
-        js.executeScript("arguments[0].scrollIntoView();", flag);
         TimeUnit.SECONDS.sleep(1);
         flag.click();
     }
