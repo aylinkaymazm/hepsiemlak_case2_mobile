@@ -21,7 +21,7 @@ public class TestCases extends BaseMethods {
 
     public void btn_city_search() {
         driver.findElement(By.cssSelector("option[value='ankara']")).click();
-        driver.findElement(By.cssSelector("div[class='city'] select")).click(); //listeyi kapatmak için kullandık.
+        driver.findElement(By.cssSelector("div[class='city'] select")).click();
 
     }
 
@@ -75,13 +75,5 @@ public class TestCases extends BaseMethods {
         flag.click();
     }
 
-    public void btn_phone_number() throws InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        WebElement flag =  driver.findElement(By.cssSelector("div[class='contact'] >button[class='btn btn-red btn-large']"));
-
-        js.executeScript("arguments[0].scrollIntoView();", flag);
-        TimeUnit.SECONDS.sleep(1);
-        flag.click();
-    }
 
 }
